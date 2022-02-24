@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<style name="Title" isDefault="false" forecolor="#00529B" scaleImage="FillFrame" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" isDefault="false" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="SubHeading" isDefault="false" forecolor="#000000" fontName="Times New Roman" fontSize="15" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Heading" isDefault="false" forecolor="#000000" fontName="Times New Roman" fontSize="12" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" isDefault="false" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" isDefault="false" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" isDefault="false" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Table" isDefault="false">
+		<box>
+			<pen lineColor="#00529B"/>
+			<bottomPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+	</parameter>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="102">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="66" width="555" height="32" forecolor="#FFD87D" backcolor="#00529B"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="411" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="SubTitle" x="202" y="0" width="138" height="32"/>
+					<textElement textAlignment="Right">
+						<font size="19" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Installation Guide]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="81" y="0" width="474" height="66" backcolor="#FFD87D"/>
+				<staticText>
+					<reportElement style="Title" x="42" y="1" width="432" height="65"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Airport Permit & Identity Management System]]></text>
+				</staticText>
+			</frame>
+			<image>
+				<reportElement style="Title" x="0" y="0" width="81" height="66" backcolor="#00529B"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band height="644">
+			<staticText>
+				<reportElement style="SubHeading" x="15" y="12" width="524" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wacom STU 530 & 500]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="70" y="44" width="469" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Required Software]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="70" y="76" width="391" height="20" isRemoveLineWhenBlank="true" backcolor="#99CCFF"/>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement style="SubHeading" x="15" y="530" width="524" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Suprema Facestation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="70" y="562" width="469" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Required Software]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeading" x="15" y="315" width="524" height="31"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Epson EOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="70" y="346" width="469" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Required Software]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeading" x="15" y="208" width="524" height="33"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Morpho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="70" y="241" width="469" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Required Software]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading" x="70" y="139" width="469" height="32"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Required Software]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubHeading" x="15" y="108" width="524" height="31"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Realscan D]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48"/>
+	</detail>
+	<columnFooter>
+		<band height="31"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="25" forecolor="#D0B48E" backcolor="#00529B"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="515" y="5" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="435" y="5" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="9"/>
+	</summary>
+</jasperReport>
